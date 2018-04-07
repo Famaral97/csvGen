@@ -47,7 +47,7 @@ function gen() {
 	var csvString = firstLine();
 	csvString += lines(names);
 
-	document.getElementById("csv").value = csvString;
+	document.getElementById("output").value = csvString;
 
 	document.getElementById("downloadButton").style.display = "block";
 }

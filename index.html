@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<script type="text/javascript" src="csvGen.js"></script>
+	<script type="text/javascript" src="download.js"></script>
 
 	<title>CSV Gen!</title>
 </head>
@@ -19,12 +20,12 @@
 				<input type="text" name="ws" id="ws" placeholder="nome do workshop">
 
 				<div class="flex-row">
-					<input type="text" name="day" id="day" placeholder="dia">
+					<input type="number" name="day" id="day" placeholder="dia">
 					<input type="text" name="month" id="month" placeholder="mes">
-					<input type="text" name="year" id="year" placeholder="ano">
+					<input type="number" name="year" id="year" placeholder="ano">
 				</div>
 
-				<input type="text" name="duration" id="duration" placeholder="duracao (em horas!)">
+				<input type="number" minlength="1" maxlength="1" name="duration" id="duration" placeholder="duracao (em horas!)">
 
 				<input type="text" name="entity" id="entity" placeholder="entidade">
 
@@ -36,9 +37,9 @@
 
 			<button onclick="gen()">Gerar CSV!</button>
 
-			<textarea disabled rows="20" cols="80" id="csv"></textarea>
+			<textarea id="output" onclick="copyOutput()" rows="20" cols="80"></textarea>
 
-			<button onclick="downloadCsv()" id="downloadButton">Download</button>
+			<button onclick="downloadCsv()" id="downloadButton" class="surprise">Download</button>
 		</div>
 	</div>
 

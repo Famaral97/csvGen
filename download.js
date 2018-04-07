@@ -14,6 +14,16 @@ function download(filename, text) {
 }
 
 function downloadCsv() {
-	text = document.getElementById("csv").value;
+	text = document.getElementById("output").value;
 	download(document.getElementById("ws").value + '_result.csv', text);
+}
+
+// this part is for copying the output to the clipboard
+
+function copyOutput() {
+
+	document.getElementById("output").select();
+    document.execCommand("Copy");
+
+	alert("Output copiado!\n");
 }

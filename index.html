@@ -5,40 +5,47 @@
 
 	<script type="text/javascript" src="csvGen.js"></script>
 
-	<title>Test</title>
+	<title>CSV Gen!</title>
 </head>
-<body class="flex-row">
+<body class="flex-column">
+	<div class="flex-row">
 
-	<textarea rows="40" cols="60" form="vals" id="names" placeholder="preenche aqui a lista de nomes. UM POR COLUNA!!"></textarea>
+		<textarea rows="40" cols="60" form="vals" id="names" placeholder="preenche aqui a lista de nomes. UM POR LINHA!!"></textarea>
 
-	<div class="flex-column">
+		<div class="flex-column">
 
-		<form class="flex-column" id="vals">
-			
-			<input type="text" name="ws" id="ws" placeholder="nome do workshop">
+			<form class="flex-column" id="vals">
+				
+				<input type="text" name="ws" id="ws" placeholder="nome do workshop">
 
-			<div class="flex-row">
-				<input type="text" name="day" id="day" placeholder="dia">
-				<input type="text" name="month" id="month" placeholder="mes">
-				<input type="text" name="year" id="year" placeholder="ano">
-			</div>
+				<div class="flex-row">
+					<input type="text" name="day" id="day" placeholder="dia">
+					<input type="text" name="month" id="month" placeholder="mes">
+					<input type="text" name="year" id="year" placeholder="ano">
+				</div>
 
-			<input type="text" name="duration" id="duration" placeholder="duracao (em horas!)">
+				<input type="text" name="duration" id="duration" placeholder="duracao (em horas!)">
 
-			<input type="text" name="entity" id="entity" placeholder="entidade">
+				<input type="text" name="entity" id="entity" placeholder="entidade">
 
-			<input type="text" name="motive" id="motive" placeholder="motivo. COMECAR COM 'ao' ou 'a'">
+				<input type="text" name="motive" id="motive" placeholder="motivo. COMECAR COM 'ao' ou 'a'">
 
-			<input type="text" name="lecturer" id="lecturer" placeholder="formador">
+				<input type="text" name="lecturer" id="lecturer" placeholder="formador">
 
-		</form>
+			</form>
 
-		<button onclick="gen()">Gerar CSV!</button>
+			<button onclick="gen()">Gerar CSV!</button>
 
-		<textarea disabled rows="20" cols="80" id="csv"></textarea>
+			<textarea disabled rows="20" cols="80" id="csv"></textarea>
 
-		<button onclick="downloadCsv()" id="downloadButton">Download</button>
+			<button onclick="downloadCsv()" id="downloadButton">Download</button>
+		</div>
 	</div>
+
+	<small>
+		<p>Made with ❤ at NAPE, by <a target="_blank" href="https://github.com/Famaral97/">Famaral97</a></p>
+		<p>Code Available <a target="_blank" href="https://github.com/Famaral97/csvGen">here</a>.</p>
+	</small>
 
 </body>
 </html>

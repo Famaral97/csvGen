@@ -49,5 +49,5 @@ function gen() {
 
 	document.getElementById("csv").value = csvString;
 
-	document.getElementById("downloadButton").display = block;
+	document.getElementById("downloadButton").style.display = "block";
 }
